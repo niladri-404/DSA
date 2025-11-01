@@ -7,6 +7,7 @@ struct node
     struct node *left;
     struct node *right;
 };
+
 struct node *createNode(int data)
 {
     struct node *n;
@@ -15,22 +16,6 @@ struct node *createNode(int data)
     n->left = NULL;
     n->right = NULL;
     return n;
-}
-
-struct node *createTree()
-{
-    int data;
-    printf("Enter data (-1 for no node): ");
-    scanf("%d", &data);
-    if (data == -1)
-        return NULL;
-
-    struct node *root = createNode(data);
-    printf("Enter left child of %d:\n", data);
-    root->left = createTree();
-    printf("Enter right child of %d:\n", data);
-    root->right = createTree();
-    return root;
 }
 
 void PreOrder(struct node*root)
@@ -96,3 +81,4 @@ int main()
     return 0;
 
 }
+
