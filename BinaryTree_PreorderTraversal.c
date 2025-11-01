@@ -49,8 +49,8 @@ void PostOrder(struct node*root)
 {
     if(root!=NULL)
     {
-        PreOrder(root->left);
-        PreOrder(root->right);
+        PostOrder(root->left);
+        PostOrder(root->right);
         printf("%d ",root->data);
     }
     else
@@ -61,9 +61,9 @@ void InOrder(struct node*root)
 {
     if(root!=NULL)
     {
-        PreOrder(root->left);
+        InOrder(root->left);
         printf("%d ",root->data);
-        PreOrder(root->right);
+        InOrder(root->right);
     }
     else
     return;
@@ -94,4 +94,5 @@ int main()
     InOrder(p);
 
     return 0;
+
 }
