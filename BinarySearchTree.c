@@ -105,7 +105,11 @@ int main()
     printf("Inorder traversal:\n ");
     InOrder(p);
     
-    printf("\n%d",isBST(p));
+    if(isBST(p))
+    {
+        printf("\nThis is a BST.");
+    }
 
     return 0;
+
 }
